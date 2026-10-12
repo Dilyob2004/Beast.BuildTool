@@ -1,0 +1,60 @@
+# Build outputs and caches (keep vendored libraries/tools outside these folders).
+[Bb]in/
+[Oo]bj/
+# BuildTool/Build is source code; only Android/Flutter build directories are outputs.
+**/Platforms/Android/**/build/
+Binaries/
+Intermediate/
+Intemediate/
+TestResults/
+/Tests/Generated/
+
+# IDE and local user state.
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.sln.docstates
+.idea/
+.gradle/
+.cxx/
+.externalNativeBuild/
+.dart_tool/
+node_modules/
+local.properties
+
+# Generated native libraries and copied SDK Java adapters in sample projects.
+/Test/*/Platforms/Android/app/src/main/jniLibs/
+/Test/*/Platforms/Android/app/src/main/java/com/beast/sdk/
+
+# Generated Visual Studio files for sample projects; keep the tool's root solution.
+/Test/*/*.sln
+/Test/*/*.vcxproj
+/Test/*/*.vcxproj.filters
+
+# Machine-specific SDK paths; copy a checked-in example on a fresh clone.
+/Test/*/Config/BuildConfig.json
+# Legacy prebuilt library is explicitly skipped by the project generator.
+/BuildTool/Templates/Android/Project/app/src/main/jniLibs/
+# Unused stock artwork from the old Android template (not used by Beast).
+**/assets/android_robot.png
+
+# Local reference material, not part of the build tool / SDK distribution.
+/Prototypes/
+
+# Signing keys and local credentials. Never stage real secrets with --force.
+*.jks
+*.keystore
+*.pfx
+*.p12
+*.key
+.env
+.env.*
+!.env.example
+**/Config/Signing/
+
+# Local diagnostics extracted while investigating the VS installer.
+/BuildTool.VisualStudio/*.res
+/BuildTool.VisualStudio/*.resources
+/BuildTool.VisualStudio/Microsoft.VisualStudio.Setup.Security.intkey.csv

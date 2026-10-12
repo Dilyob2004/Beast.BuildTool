@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Commands package="guidBeastPackage">
+    <Groups>
+      <Group guid="guidBeastCommands" id="BeastProjectGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidBeastCommands" id="WindowsHotReload" priority="0x0100" type="Button">
+        <Parent guid="guidBeastCommands" id="BeastProjectGroup" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Beast: Hot Reload (Windows, Debug)</ButtonText>
+          <CommandName>Beast.WindowsHotReload</CommandName>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+  <Symbols>
+    <GuidSymbol name="guidBeastPackage" value="{eb4376b4-bb07-46fd-b8d8-597e39135427}" />
+    <GuidSymbol name="guidBeastCommands" value="{a541cd71-494c-4fd3-abfb-5b2f6bbd1668}">
+      <IDSymbol name="BeastProjectGroup" value="0x1020" />
+      <IDSymbol name="WindowsHotReload" value="0x0100" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>

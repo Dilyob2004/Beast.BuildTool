@@ -1,0 +1,12 @@
+﻿using Beast.BuildTool;
+
+// The Launch module is the executable entry point. Add include paths, defines and libraries here.
+public sealed class Launch : ModuleRules
+{
+    public Launch(ModulesInfo info)
+    {
+        Definitions.Add("RESOURCESDEMO_BUILD");
+        Shaders.Add(new ShaderCompileRequest { Name = "UIVertex", Source = "Source/Launch/Shaders/UI.hlsl", EntryPoint = "VSMain", Stage = ShaderStage.Vertex });
+        Shaders.Add(new ShaderCompileRequest { Name = "UIFragment", Source = "Source/Launch/Shaders/UI.hlsl", EntryPoint = "PSMain", Stage = ShaderStage.Fragment });
+    }
+}

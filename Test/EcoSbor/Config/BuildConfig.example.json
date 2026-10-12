@@ -1,0 +1,8 @@
+{
+  "hotReload": true,
+  "engine": { "enabled": true, "sdkRoot": "" },
+  "defaultConfiguration": "Debug",
+  "defaultPlatform": "Windows",
+  "android": { "minSdk": 29, "targetSdk": 35 },
+  "windows": { "dpiAware": true }
+}
